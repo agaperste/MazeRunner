@@ -1,0 +1,182 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.example.amazebykalyn.PlayActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <edu.wm.cs.cs301.amazebyjackiebethany.ui.DrawingView
+            android:id="@+id/drawing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#666666" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <ToggleButton
+                android:id="@+id/map_toggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onMapToggle"
+                android:textOff="Map"
+                android:textOn="Map" />
+
+            <ToggleButton
+                android:id="@+id/walls_toggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onWallToggle"
+                android:textOff="Walls"
+                android:textOn="Walls" />
+
+            <ToggleButton
+                android:id="@+id/solution_toggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onSolutionToggle"
+                android:textOff="Solution"
+                android:textOn="Solution" />
+
+            <ToggleButton
+                android:id="@+id/pause_toggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onPauseToggle"
+                android:textOff="Pause"
+                android:textOn="Play" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" >
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_gravity="center" >
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/battery_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/battery_text"
+            android:text="2500"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <GridLayout
+            android:layout_width="156dp"
+            android:layout_height="142dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="48dp"
+            android:columnCount="1" >
+
+            <Button
+                android:id="@+id/down_button"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_row="0"
+                android:onClick="onDownClick"
+                android:text="@string/down_button" />
+
+            <Button
+                android:id="@+id/right_button"
+                android:layout_column="0"
+                android:layout_gravity="right|center_vertical"
+                android:layout_row="0"
+                android:onClick="onRightClick"
+                android:text="@string/right_button" />
+
+            <Button
+                android:id="@+id/left_button"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_row="0"
+                android:onClick="onLeftClick"
+                android:text="@string/left_button" />
+
+            <Button
+                android:id="@+id/up_button"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="0"
+                android:onClick="onUpClick"
+                android:text="@string/up_button" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/battery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Battery"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/pathLen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/battery_value"
+            android:text="Path Length: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/pathNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pathLen"
+            android:layout_alignBottom="@+id/pathLen"
+            android:layout_alignRight="@+id/battery_value"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+

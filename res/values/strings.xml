@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AMazeJackieBethany</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="continue_button">Start</string>
+    <string name="title">Maze</string>
+    <string name="difficulty">Compexity</string>
+    <string name="random_gen">Generation Type</string>
+    <string name="upload">Upload Maze</string>
+    <string name="generatingtext">Progress Bar</string>
+    <string name="cancelbutton">Cancel</string>
+    <string name="finish">Game Result:</string>
+
+    <string-array name="algorithm">
+        <item>Backtracking</item>
+        <item>Prim\'s</item>
+        <item>Aldous-Broder\'s</item>
+    </string-array>
+
+    <string name="title_activity_state_generating">StateGenerating</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="title_activity_finish">FinishActivity</string>
+    <string name="title_activity_finished">FinishedActivity</string>
+    
+    <string name="left_button">←</string>
+    <string name="right_button">→</string>
+    <string name="up_button">↑</string>
+    <string name="down_button">↓</string>
+    
+    
+    <string-array name="main_generation_array">
+        <item>Random Generation</item>
+        <item>From A File</item>
+    </string-array>
+    
+    <string-array name="generation_random_array">
+        <item>Backtracking</item>
+        <item>Prims</item>
+        <item>Aldous-Broder</item>
+    </string-array>
+    
+    <string-array name="generation_file_array">
+        <item>File Level 0</item>
+        <item>File Level 1</item>
+        <item>File Level 2</item>
+        <item>File Level 3</item>
+        <item>File Level 4</item>
+    </string-array>
+
+    <string-array name="robot_operation_array">
+        <item>Manual</item>
+        <item>Gambler</item>
+        <item>Tremaux</item>
+        <item>Wall Follower</item>
+        <item>Wizard</item>
+    </string-array>
+    
+
+</resources>
